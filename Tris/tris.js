@@ -31,6 +31,7 @@ function inserisci(row,col){
         if(win || tie){
             if(g==1) s="O";
             else s="X";
+            let result="";
             if(win){
                 result="<h1>"+"Ha vinto il giocatore "+s+"!"+"</h1>";
                 if(s=="O") winO++;
@@ -58,7 +59,7 @@ function reset(){
         }
 }
 function updateScore(){
-    document.querySelector("div.result").innerHTML = "X "+winX+" - "+winO+" O";
+    document.querySelector("div.score").innerHTML = "X "+winX+" - "+winO+" O";
 }
 function check(){
     return checkwin_hori()||checkwin_vert()||checkwin_diag();
