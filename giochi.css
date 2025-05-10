@@ -1,0 +1,80 @@
+body{
+    margin: 0;
+    background-color: #222;
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    font-size: 1.8rem;
+}
+h1{
+    margin: 1rem auto;
+    width: fit-content;
+    color:aliceblue;
+}
+table#F4{
+    width: fit-content;
+    background-color: rgb(44, 44, 255);
+    margin: 2rem auto 0;
+    border: rgb(44, 44, 255) 1.5rem solid;
+    border-left-width: 0.3rem;
+    border-right-width: 0.3rem;
+    border-top-width: 0.5rem;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+}
+table#F4 button{
+    border-radius: 100%;
+    width: 3rem;
+    height: 3rem;
+    background-color: #222;
+    padding: 0;
+}
+
+table#tris{
+    width: fit-content;
+    background-color: transparent;
+    margin: 2rem auto 0;
+    border-collapse: collapse;
+}
+table#tris td{
+    width: fit-content;
+    border: 6px solid aliceblue;
+}
+table#tris button{
+    width: 6rem;
+    height: 6rem;
+    background-color: #222;
+    padding: 0;
+    border: 0;
+    font-size: 4rem;
+}
+
+td{
+    width: 3rem;
+    height: 3rem;
+}
+
+.score{
+    color: aliceblue;
+    font-size: 3rem;
+    margin: 0 auto;
+    width: fit-content;
+}
+
+.reset{
+    width: fit-content;
+    margin: 2rem auto 0;
+    font-size: 0rem;
+    
+}
+.reset button{
+    font-size: 1.2rem;
+    background-color: #222;
+    color: aliceblue;
+    border-radius: 12px;
+    padding: 1rem 1.5rem;
+    box-shadow: #000 0 0 2rem 0px;
+}
+table td button:hover{
+    background-color: #333;
+    cursor: pointer;
+}
