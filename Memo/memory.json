@@ -1,0 +1,102 @@
+[
+    {
+        "id": 0,
+        "front": "donut.png",
+        "back": "back.jpg"
+    },
+    {
+        "id": 1,
+        "front": "maglia.png",
+        "back": "back.jpg"
+    },
+    {
+        "id": 2,
+        "front": "papera.png",
+        "back": "back.jpg"
+    },
+    {
+        "id": 3,
+        "front": "pollo.png",
+        "back": "back.jpg"
+    },
+    {
+        "id": 4,
+        "front": "anguria.png",
+        "back": "back.jpg"
+    },
+    {
+        "id": 5,
+        "front": "salvadanaio.png",
+        "back": "back.jpg"
+    },
+    {
+        "id": 6,
+        "front": "tavolozza.png",
+        "back": "back.jpg"
+    },
+    {
+        "id": 7,
+        "front": "cappello.png",
+        "back": "back.jpg"
+    },
+    {
+        "id": 8,
+        "front": "anello.png",
+        "back": "back.jpg"
+    },
+    {
+        "id": 9,
+        "front": "conchiglia.png",
+        "back": "back.jpg"
+    },
+    {
+        "id": 10,
+        "front": "bersaglio.png",
+        "back": "back.jpg"
+    },
+    {
+        "id": 11,
+        "front": "valigia.png",
+        "back": "back.jpg"
+    },
+    {
+        "id": 12,
+        "front": "maschere.png",
+        "back": "back.jpg"
+    },
+    {
+        "id": 13,
+        "front": "tromba.png",
+        "back": "back.jpg"
+    },
+    {
+        "id": 14,
+        "front": "zampe.png",
+        "back": "back.jpg"
+    },
+    {
+        "id": 15,
+        "front": "cervello.png",
+        "back": "back.jpg"
+    },
+    {
+        "id": 16,
+        "front": "guanti.png",
+        "back": "back.jpg"
+    },
+    {
+        "id": 17,
+        "front": "bolle.png",
+        "back": "back.jpg"
+    },
+    {
+        "id": 18,
+        "front": "squalo.png",
+        "back": "back.jpg"
+    },
+    {
+        "id": 19,
+        "front": "granchio.png",
+        "back": "back.jpg"
+    }
+]
