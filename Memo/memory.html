@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="memory.css">
+    <script src="memory.js" defer></script>
+    <title>Memory</title>
+</head>
+<body>
+    <h1 class="title">Memory</h1>
+    <div class="score"></div>
+    <div class="difficulty">
+        <button class="easy" data-rows="4" data-cols="4">
+            <p class="lvl">Easy</p>
+            <p class="description">8 pairs - 16 cards</p><!-- 4x4 -->
+        </button>
+        <button class="medium" data-rows="4" data-cols="7">
+            <p class="lvl">Medium</p>
+            <p class="description">14 pairs - 28 cards</p><!-- 4x7 -->
+        </button>
+        <button class="hard" data-rows="5" data-cols="8">
+            <p class="lvl">Hard</p>
+            <p class="description">20 pairs - 40 cards</p><!-- 5x8 -->
+        </button>
+    </div>
+    <div class="pairs"></div>
+    <div class="cards-container"></div>
+</body>
+</html>
