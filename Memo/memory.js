@@ -25,11 +25,11 @@ function setTable(r,c){
                 pairs--;
             }
         }
+        return m;
     })
     .catch(error => {
         console.log('Errore:'+error);
     });
-    return m;
 }
 function generateTable(m){
     const container=document.querySelector('div.cards-container');
