@@ -27,7 +27,7 @@ function setTable(r,c){
         }
     })
     .catch(error => {
-        console.error('Errore:'+error);
+        console.log('Errore:'+error);
     });
     return m;
 }
