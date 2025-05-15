@@ -1,35 +1,126 @@
 var table=[];
+const cards=[
+    {
+        "id": 0,
+        "front": "donut.png",
+        "back": "back.jpg"
+    },
+    {
+        "id": 1,
+        "front": "maglia.png",
+        "back": "back.jpg"
+    },
+    {
+        "id": 2,
+        "front": "papera.png",
+        "back": "back.jpg"
+    },
+    {
+        "id": 3,
+        "front": "pollo.png",
+        "back": "back.jpg"
+    },
+    {
+        "id": 4,
+        "front": "anguria.png",
+        "back": "back.jpg"
+    },
+    {
+        "id": 5,
+        "front": "salvadanaio.png",
+        "back": "back.jpg"
+    },
+    {
+        "id": 6,
+        "front": "tavolozza.png",
+        "back": "back.jpg"
+    },
+    {
+        "id": 7,
+        "front": "cappello.png",
+        "back": "back.jpg"
+    },
+    {
+        "id": 8,
+        "front": "anello.png",
+        "back": "back.jpg"
+    },
+    {
+        "id": 9,
+        "front": "conchiglia.png",
+        "back": "back.jpg"
+    },
+    {
+        "id": 10,
+        "front": "bersaglio.png",
+        "back": "back.jpg"
+    },
+    {
+        "id": 11,
+        "front": "valigia.png",
+        "back": "back.jpg"
+    },
+    {
+        "id": 12,
+        "front": "maschere.png",
+        "back": "back.jpg"
+    },
+    {
+        "id": 13,
+        "front": "tromba.png",
+        "back": "back.jpg"
+    },
+    {
+        "id": 14,
+        "front": "zampe.png",
+        "back": "back.jpg"
+    },
+    {
+        "id": 15,
+        "front": "cervello.png",
+        "back": "back.jpg"
+    },
+    {
+        "id": 16,
+        "front": "guanti.png",
+        "back": "back.jpg"
+    },
+    {
+        "id": 17,
+        "front": "bolle.png",
+        "back": "back.jpg"
+    },
+    {
+        "id": 18,
+        "front": "squalo.png",
+        "back": "back.jpg"
+    },
+    {
+        "id": 19,
+        "front": "granchio.png",
+        "back": "back.jpg"
+    }
+];
 function setTable(r,c){
-    fetch('https://alessiomazza07.github.io/games/Memo/memory.json')
-    .then(response => {
-        if (!response.ok)
-            console.log('Problema con la fetch');
-        return response.json();
-    })
-    .then(cards => {
-        let ids=[];
-        let pairs=(r*c);
-        let n=0;
-        for(let i=0;i<pairs;i+=2){
-            ids[i]=n;
-            ids[i+1]=n;
-            n++;
+    let ids=[];
+    let pairs=(r*c);
+    let n=0;
+    for(let i=0;i<pairs;i+=2){
+        ids[i]=n;
+        ids[i+1]=n;
+        n++;
+    }
+    var m=[];
+    for(let i=0;i<r;i++){
+        m[i]=[];
+        for(let j=0;j<c;j++){
+            let id=ids[Math.round(Math.random()*(pairs-1))];
+            m[i][j]=cards[id];
+            ids.splice(ids.indexOf(id), 1);
+            pairs--;
         }
-        var m=[];
-        for(let i=0;i<r;i++){
-            m[i]=[];
-            for(let j=0;j<c;j++){
-                let id=ids[Math.round(Math.random()*(pairs-1))];
-                m[i][j]=cards[id];
-                ids.splice(ids.indexOf(id), 1);
-                pairs--;
-            }
-        }
-        return m;
-    })
-    .catch(error => {
-        console.log('Errore:'+error);
-    });
+    }
+    return m;
 }
 function generateTable(m){
     const container=document.querySelector('div.cards-container');
