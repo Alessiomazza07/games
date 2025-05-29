@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="minesweeper.css">
+    <script src="minesweeper.js" defer></script>
+    <title>Minesweeper</title>
+</head>
+<body>
+    <h1 class="title">Minesweeper</h1>
+    <div id="gameOver" class="result">
+        <div class="result-content">
+            <h2 id="result-score"></h2>
+            <button id="restartButton" onclick="restart()">Gioca Ancora</button>
+        </div>
+    </div>
+    <div class="container">
+        <div class="details">
+            <div class="bomb-counter"><img src="https://img.icons8.com/ios-filled/50/naval-mine.png" alt="naval-mine"/><p id="number">00</p></div>
+            <button class="switch" onclick="switchFlag()"><img src="mnswprimages/shovel.webp" alt="flag"></button>
+            <select id="level">
+              <option value="easy" data-row="9" data-col="9" data-bomb="10" selected>Easy</option>
+              <option value="medium" data-row="16" data-col="16" data-bomb="40">Medium</option>
+              <option value="hard" data-row="16" data-col="30" data-bomb="99">Hard</option>
+            </select>
+        </div>
+        <div class="field">
+        </div>
+    </div>
+</body>
+</html>
