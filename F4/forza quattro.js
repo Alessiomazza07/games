@@ -2,6 +2,7 @@ let rows=6,cols=7;
 let table=[];
 let g=-1;
 let vittoria=false, tie=false;
+let win1=0,win2=0;
 for(var r=0;r<rows;r++){
     table[r]=[];
     for(var c=0;c<cols;c++){
@@ -25,10 +26,12 @@ function inserisci(col){
         if(check) vittoria = true;
         else if(par) tie=true;
         if(vittoria || tie){
-            if(g==1) s="rosso";
-            else s="giallo";
-            if(vittoria)
+            if(vittoria){
+                if(g==1){ s="rosso"; win1++;}
+                else{ s="giallo"; win2++ }
                 result="<h1>"+"Ha vinto il giocatore "+s+"!"+"</h1>";
+                updateScore();
+            }
             else
                 result="<h1>"+"Pareggio"+"</h1>";
             document.getElementById("risultato").innerHTML=result;
@@ -93,4 +96,23 @@ function checkwin_diag(){
             }
         }
     return false;
+}
+function updateScore(){
+    document.querySelector("div.score").innerHTML = "<div id='red'></div> "+win1+" - "+win2+"<div id='yellow'></div>";
+}
+function reset(){
+    g=-1;
+    vittoria=false;
+    tie=false;
+    for(let r=0;r<rows;r++){
+        table[r]=[];
+        for(let c=0;c<cols;c++)
+            table[r][c]=0;
+    }
+    for(let r=0;r<rows;r++)
+        for(let c=0;c<cols;c++){
+            let id=String(r)+String(c);
+            document.getElementById(id).style.backgroundColor='#222';
+        }
+    document.getElementById("risultato").innerHTML='';
 }
